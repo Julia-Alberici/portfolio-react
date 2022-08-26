@@ -1,8 +1,9 @@
-import Navigation from "./Navigation";
+import Navigation from "../Navigation";
+import { HeaderWrapper } from "./styled";
 
 export default function Header() {
   return (
-    <header className="header-wrapper" id="home">
+    <HeaderWrapper id="home">
       <Navigation />
       <h1>Julia Alberici</h1>
 
@@ -27,6 +28,6 @@ export default function Header() {
           Github
         </a>
       </div>
-    </header>
+    </HeaderWrapper>
   );
 }
