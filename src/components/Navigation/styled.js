@@ -10,45 +10,53 @@ export const NavWrapper = styled.div`
     animation: transitionBackground 6s ease-in-out infinite;
 `;
 
-export const NavContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
 export const Menu = styled.div`
     position: fixed;
     top:70px;
-    right:30px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: transparent;
-    box-shadow: 0px 0px 0px 0px transparent;
-    z-index:-1;
-    transition: all .4s ease-in-out;
+    height: 0;
+    width: 100%;
+    border-radius:0 0 10px 10px;
+    background-color: #000;
+    transition: height .4s ease;
 
+    &.opened{
+        z-index:1;
+        background-color: #000;
+        height:100%;
+
+        Nav{
+            height: auto;
+
+            li a{
+            height: 100px;
+            border-bottom: 1px solid #ae3118;
+        }
+        }
+    }
 `;
 export const Nav = styled.nav`
-    position: absolute;
-    top: 0; 
-    right: 0;
-    opacity: ${props => (props.isOpened ? '1' : '0')};
+    height: 0;
     z-index:2;
-    transition: all .4s ease-in-out;
 
     ul{
         list-style: none;
         padding: 0;
+        margin: 20px 20px 0;
+        transition: height .8s  ease;
+        overflow: hidden;
 
         li a{
             text-decoration: none;
             color: #FAA719;
-            font-size: 2em;
+            font-size: 1.3em;
+            display:block;
             letter-spacing: 6px;
             line-height: 80px;
             padding: 10px;
             text-transform: uppercase;
+            height: 0;
+            overflow:hidden;
+            transition: height .4s  ease;
         }
     }
 `;

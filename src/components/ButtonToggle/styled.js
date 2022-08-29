@@ -31,4 +31,19 @@ export const BtnMenu = styled.button`
     span:nth-child(3){
         top: 30px;
     }
+
+    &.toggled span:nth-child(1){
+    transform: rotate(45deg);
+    top:20px;
+    }
+    &.toggled span:nth-child(2){
+    transform:translateX(30px);
+    opacity: 0;
+    width: 5px;
+    }
+    &.toggled span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 20px;
+    }
 `;
+
