@@ -28,9 +28,42 @@ export const Menu = styled.div`
             height: auto;
 
             li a{
-            height: 100px;
-            border-bottom: 1px solid #ae3118;
+                height: 100px;
+                border-bottom: 1px solid #ae3118;
+            }
         }
+    }
+    @media(min-width: 1024px){
+        position: static;
+        &.opened{
+            z-index:unset;
+            background-color: unset;
+            height:unset;
+            Nav{
+            height: unset;
+
+            li a{
+                height: unset;
+                border-bottom: unset;
+            }
+        }
+        }
+        
+        Nav{
+            height: 70px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            ul{
+                display: flex;
+                gap: 20px;
+                li a{
+                    height: 50px;
+                    line-height: unset;
+                    font-weight: bold;
+                } 
+            } 
         }
     }
 `;
@@ -48,10 +81,10 @@ export const Nav = styled.nav`
         li a{
             text-decoration: none;
             color: #FAA719;
-            font-size: 1.3em;
+            font-size: 1.2em;
             display:block;
-            letter-spacing: 6px;
-            line-height: 80px;
+            letter-spacing: 5px;
+            line-height: 90px;
             padding: 10px;
             text-transform: uppercase;
             height: 0;

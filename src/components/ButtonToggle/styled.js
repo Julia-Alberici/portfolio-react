@@ -20,7 +20,7 @@ export const BtnMenu = styled.button`
         background-color: #000;
         position:absolute;
         border-radius: 5px;
-        transition: all .4s ease-in-out;
+        transition: top .4s ease, transform .2s ease;
     }
     span:nth-child(1){
         top: 10px;
@@ -44,6 +44,9 @@ export const BtnMenu = styled.button`
     &.toggled span:nth-child(3){
     transform: rotate(-45deg);
     top: 20px;
+    }
+    @media(min-width: 1024px){
+        display:none;
     }
 `;
 
